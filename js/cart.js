@@ -140,7 +140,7 @@ $(document).ready(function () {
       const savedMoneyDiv = document.createElement("div");
       savedMoneyDiv.classList.add("d-flex", "align-items-center", "mt-2");
       const coinIcon = document.createElement("i");
-      coinIcon.classList.add("bi", "bi-coin", "me-1");
+      coinIcon.classList.add("bi", "bi-coin", "me-1", "text-success-emphasis");
       const savedText = document.createElement("span");
       savedText.classList.add("fs-7", "fw-semibold");
       savedText.textContent = `You have saved $41`;
@@ -196,7 +196,6 @@ $(document).ready(function () {
     ).textContent = `Pay $${totalPrice.toFixed(2)}`;
   }
 
-
   $(document).on("click", ".remove-item", function () {
     let productId = parseInt($(this).data("id"));
     state.cart = state.cart.filter((item) => item.id !== productId);
@@ -236,5 +235,20 @@ $(document).ready(function () {
     window.location.href = "address.html";
   });
 
-  //
+  $("#payButton").hover(
+    function () {
+      $(this).css({
+        "background-color": "#272626",
+        "border-radius": "5px",
+        "color": "#fff"
+      });
+    },
+    function () {
+      $(this).css({
+        "background-color": "#fff",
+        "color": "#000",
+        "border-radius": "0px",
+      });
+    }
+  );
 });

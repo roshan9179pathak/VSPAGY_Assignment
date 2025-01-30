@@ -97,7 +97,8 @@
             <div class="card-body">
               <h4 class="card-title mb-4">Payment Method</h4>
 
-              <!-- Payment method radio buttons -->
+             
+              
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -137,7 +138,7 @@
                             class="form-select"
                           >
                             <option value="" disabled selected>YYYY</option>
-                            <!-- Year options will be populated here -->
+                          
                           </select>
 
                           <select
@@ -145,7 +146,7 @@
                             id="month"
                             class="form-select"
                           >
-                            <!-- Month options will be populated here -->
+                           
                           </select>
                         </div>
                       </div>
@@ -160,12 +161,33 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Net bank -->
+                <div class="d-flex align-items-center mb-3">
+                  <input type="checkbox" class="form-check-input me-3">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-bank fs-5 text-primary me-2"></i> 
+                      <span class="fw-medium">Net Banking</span>
+                  </div>
               </div>
+          
+              <!-- Google Pay -->
+              <div class="d-flex align-items-center">
+                  <input type="checkbox" class="form-check-input me-3">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-google fs-5 text-danger me-2"></i> 
+                      <span class="fw-medium">Google Pay/UPI</span>
+                  </div>
+              </div>
+              </div>
+
+
             </div>
           </div>
         </div>
 
-        <!-- Discount-->
+      
+        
         <div style="padding-left: 20px" class="col-6">
           <div
             style="display: flex; justify-content: space-between; width: 60%"
