@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- My css -->
+    <link rel="stylesheet" href="../styles/cart.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="text-center py-3">
+      <h1 class="fs-20">Shopping Cart</h1>
+    </header>
+
+    <!-- Cart Page Content -->
+    <div class="container mt-4">
+      <div class="row">
+        <!-- Left Section: Billing, Shipping, and Payment -->
+        <div class="col-md-6">
+          <!-- Shipping & Delivery Address -->
+          <h5 class="section-title">Customer details</h5>
+          <div class="container mt-4">
+            <div class="card mb-3 bg-transparent border-0">
+              <div class="card-body bg-transparent">
+                <!-- Billing and shipping box-------- -->
+
+                <div class="billing-box">
+                  <p class="billing-header">Billing Address</p>
+                  <div class="billing-address">
+                    <span>Default Address</span>
+                    <button id="change-billing" class="btn btn-sm btn-secondary change-btn">
+                      Change
+                    </button>
+                  </div>
+                </div>
+
+                <div class="billing-box">
+                  <p class="billing-header">Shipping Address</p>
+                  <div class="billing-address">
+                    <span>Default Address</span>
+                    <button id="change-shipping" class="btn btn-sm btn-secondary change-btn">
+                      Change
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Add New Address Button -->
+                <div class="address-btns mt-3 text-end">
+                  <a href="address.html">
+                    <button class="btn btn-primary">+ Add New Address</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------------------------------- -->
+
+          <!-- Payment Methods -->
+
+          <!-- Temp image -->
+        </div>
+
+        <!-- Right Section: Product Details -->
+        <div class="col-md-6">
+          <h4 class="fs-20">Your Order</h4>
+
+          <!-- This will only containe products -->
+          <div
+            style="max-height: 50vh; overflow: scroll"
+            id="products-container"
+          >
+            <!-- First product -->
+          </div>
+
+          <!-- Delivery and coupon -->
+        </div>
+      </div>
+
+      <!-- Another row -->
+      <div class="row mt-5">
+        <!-- Payment card -->
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title mb-4">Payment Method</h4>
+
+              <!-- Payment method radio buttons -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="paymentMethod"
+                  id="debitCreditCard"
+                  checked
+                />
+                <label class="form-check-label" for="debitCreditCard">
+                  Debit/Credit Card
+                </label>
+                <div
+                  id="debitCreditCardDetails"
+                  class="payment-option active mt-4"
+                >
+                  <div class="mb-3">
+                    <label for="cardNumber" class="form-label"
+                      >Enter Card Number</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cardNumber"
+                      placeholder="1234 5678 9101 1121"
+                    />
+                  </div>
+
+                  <div class="expiry-box">
+                    <div>
+                      <span>Valid Date</span>
+
+                      <div class="select-expiry">
+                        <div>
+                          <select
+                            style="width: 50%; margin-right: 20px"
+                            id="year"
+                            class="form-select"
+                          >
+                            <option value="" disabled selected>YYYY</option>
+                            <!-- Year options will be populated here -->
+                          </select>
+
+                          <select
+                            style="width: 30%"
+                            id="month"
+                            class="form-select"
+                          >
+                            <!-- Month options will be populated here -->
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column ms-auto cvv-container">
+                      <span>CVV</span>
+                      <input type="number" class="cvv-input-box" />
+                    </div>
+                    <!-- Pay button -->
+                    <div  class="pay-button">
+                      <button onclick="alert(`From here, we can send the user to payment page`)" id="payButton">Pay $0</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discount-->
+        <div style="padding-left: 20px" class="col-6">
+          <div
+            style="display: flex; justify-content: space-between; width: 60%"
+          >
+            <span>Delivery Charges</span>
+            <div>
+              <span style="font-weight: 500">$10</span>
+              <span style="margin-left: 10px">Express Delivery</span>
+            </div>
+          </div>
+          <!-- coupon -->
+          <div
+            style="display: flex; justify-content: space-between; width: 60%"
+          >
+            <span>Coupon Discount</span>
+            <div>
+              <span style="font-weight: 500">$0</span>
+              <span style="margin-left: 10px">No coupon available</span>
+            </div>
+          </div>
+
+          <!-- Total Calculated payment -->
+          <div
+            style="
+              margin-top: 40px;
+              background: #fff;
+              width: 60%;
+              padding: 10px;
+            "
+          >
+            <span></span>
+            <span id="totalPrice" style="font-weight: 700">$20</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="../js/state.js"></script>
+    <script src="../js/cart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 2 Rows with 50vh</title>
+    <!-- Bootstrap CSS link -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Container to hold rows -->
+    <div class="container-fluid p-5" style="height: 100vh">
+      <!-- First Row -->
+      <div
+        class=""
+        style="
+          min-height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border-bottom: 2px solid #000;
+          margin-bottom: 10px;
+        "
+      >
+        <div style="border-bottom: 2px solid #000; padding-bottom: 0">
+          <h3>Address</h3>
+        </div>
+
+        <!-- Already set adress -->
+        <div id="address-list" class="container p-4">
+          <div class="row g-4"></div>
+        </div>
+
+        <button id="set-adress"
+          style="
+            width: 15%;
+            height: 40px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+          "
+        >
+          Set Adress
+        </button>
+      </div>
+
+      <!-- Second Row -->
+      <form id="address-form" class="">
+        <!-- Address row 1 -->
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 40px 0;
+          "
+        >
+          <!-- Name to zip -->
+          <div style="display: flex; margin-bottom: 20px">
+            <div
+              style="display: flex; flex-direction: column; margin-right: 20px"
+            >
+              <label for="hno">Flat no.</label>
+              <input type="text" id="hno" />
+            </div>
+
+            <div
+              style="display: flex; flex-direction: column; margin-right: 20px"
+            >
+              <label for="street">Street Number/Name</label>
+              <input type="text" id="street" />
+            </div>
+
+            <div
+              style="display: flex; flex-direction: column; margin-right: 20px"
+            >
+              <label for="city">City</label>
+              <input type="text" id="city" />
+            </div>
+          </div>
+
+          <!-- country & zip -->
+          <div style="display: flex">
+            <div
+              style="display: flex; flex-direction: column; margin-right: 20px"
+            >
+              <label for="country">Country</label>
+              <input type="text" id="country" />
+            </div>
+            <div
+              style="display: flex; flex-direction: column; margin-right: 20px"
+            >
+              <label for="zip">Zip</label>
+              <input type="text" id="zip" />
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+
+        <button
+          type="submit"
+          style="margin: 20px 0; width: 15%; height: 40px; border-radius: 5px"
+        >
+          Add Address
+        </button>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="../js/adress-form.js"></script>
+  </body>
+</html>

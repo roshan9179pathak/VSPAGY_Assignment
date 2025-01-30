@@ -1,0 +1,175 @@
+
+body {
+    background-color: #F0F2F4;
+    color: black;
+}
+
+header {
+    background-color: #3C10BA;
+    color: white;
+}
+
+.btn-custom {
+    background-color: #B53FBF;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #9e34a8;
+}
+
+.card-body {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.product-details img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.address-btns button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.billing-box {
+    width: 80%;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 0 auto;
+}
+.billing-header {
+    font-weight: 700;
+    margin: 0;
+}
+.billing-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.address-btns button {
+    width: 40%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #3C10BA;
+    text-align: right;
+    font-weight: 500;
+}
+
+.change-btn{
+    background: #D9D9D9;
+    width: 20%;
+    color: #000;
+    border: none;
+    outline: none;
+    font-weight: 400;
+}
+
+.billing-box{
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 20px;
+}
+
+.payment-option {
+    display: none;
+}
+.payment-option.active {
+    display: block;
+}
+
+
+.card {
+    height: 40vh;
+    overflow-y: auto;
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.payment-option {
+    display: none;
+}
+
+.payment-option.active {
+    display: block;
+}
+
+.form-check {
+    margin-bottom: 1rem;
+}
+
+.form-check .form-check-input {
+    margin-top: 0.3rem;
+}
+
+
+.btn {
+    margin-top: 10px;
+}
+
+.form-control{
+    width: 80%;
+}
+
+.expiry-box{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.select-expiry div{
+    display: flex;
+}
+
+.select-expiry div select{
+    align-content: flex-end;
+}
+
+.cvv-input-box{
+    width: 40%;
+    height: auto;
+}
+
+.pay-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.pay-button button{
+    margin-top: auto; 
+    align-self: center;
+}
+
+.cvv-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.cvv-container input{
+margin-top: auto;
+}
+
+
+/* Product Page CSS */
+
